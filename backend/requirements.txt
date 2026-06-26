@@ -1,9 +1,9 @@
-fastapi==0.104.1
-streamlit==1.28.1
-transformers==4.34.0
-torch==2.1.0
-Wikipedia-API==0.6.0
-pydantic==2.4.2
-pytest==7.4.3
-httpx==0.25.1
+streamlit
+fastapi
+pydantic
+transformers
+torch
+Wikipedia-API
+pytest
+httpx
 uvicorn
