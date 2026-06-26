@@ -1,9 +1,8 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.2.1+cpu
-transformers==4.38.1
 streamlit
 fastapi
 pydantic
+transformers
+torch
 Wikipedia-API
 pytest
 httpx
