@@ -1,9 +1,5 @@
 streamlit
-fastapi
 pydantic
-transformers
-torch
-Wikipedia-API
-pytest
 httpx
-uvicorn
+requests
+Wikipedia-API
