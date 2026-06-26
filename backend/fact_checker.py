@@ -50,6 +50,7 @@ class FactChecker:
         )
         self.language = language
         logger.info(f"FactChecker initialized with language: {language}")
+        
 
     def check_fact(self, query: str, max_summary_length: int = 300) -> Dict[str, Any]:
         """
