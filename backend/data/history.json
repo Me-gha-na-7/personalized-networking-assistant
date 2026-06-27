@@ -49,5 +49,83 @@
       "num_generated": 1
     },
     "created_at": "2026-06-25T16:20:24.980310Z"
+  },
+  {
+    "id": "conv_c08cadb7",
+    "type": "conversation_generation",
+    "event_description": "Tech Startups and AI Innovation Mixer",
+    "themes": [
+      "entrepreneurship",
+      "innovation"
+    ],
+    "interests": [
+      "machine learning",
+      "app development"
+    ],
+    "content": {
+      "conversation_starters": [
+        {
+          "id": "starter_9a90453d",
+          "starter": "\"I'm going to tell you this story. I was in an engineering company when I was young, and I had an idea for a startup. I was in an engineering company at the time. I had no idea how to do it, but I thought it was cool."
+        },
+        {
+          "id": "starter_5742d94d",
+          "starter": "\"This is the world's first and the largest virtual machine you can buy to have a virtual reality experience.\" When I asked that question, the person who had the most answers was \"Cynthia\" who had the most of it. She was really excited about the possibilities of the technology."
+        },
+        {
+          "id": "starter_5e88e31a",
+          "starter": "\"We are building a great company with a great team. We are building a great business. We are building a great team. We are building a great team. We are building a great company. We are building a great team. We are building a great company."
+        }
+      ],
+      "num_generated": 3
+    },
+    "created_at": "2026-06-27T02:28:49.293509Z"
+  },
+  {
+    "id": "conv_def49050",
+    "type": "conversation_generation",
+    "event_description": "ai for sustainabale cities  conference",
+    "themes": [
+      "artificial intelligence"
+    ],
+    "interests": [
+      "ai"
+    ],
+    "content": {
+      "conversation_starters": [
+        {
+          "id": "starter_02c147df",
+          "starter": "\"Here's a little tutorial on how to create a social network, it's very simple, there's no manual, and you just click and tap on the button to start.\" As an added bonus, it would be easy to implement in the next version of the project."
+        }
+      ],
+      "num_generated": 1
+    },
+    "created_at": "2026-06-27T03:20:25.807745Z"
+  },
+  {
+    "id": "conv_94be73f9",
+    "type": "conversation_generation",
+    "event_description": "ai for sustainable  development",
+    "themes": [
+      "sustainability",
+      "artificial intelligence"
+    ],
+    "interests": [
+      "ai"
+    ],
+    "content": {
+      "conversation_starters": [
+        {
+          "id": "starter_b117cd02",
+          "starter": "\"Why do you think you're an AI problem?\" \"It's not as hard as we think. It's a real problem. There's no magic. It's just a problem.\" The idea of the problem is that people can do things that could have been done at the beginning. We will not be able to do it in a future."
+        },
+        {
+          "id": "starter_af927aff",
+          "starter": "\"Hi, this is Adam. I am trying to find some inspiration for a book that I am writing and am trying to share with you. I'm not sure what book you want to read so please do not say I have no idea. I know of a few that I am working on that are just too hard to explain."
+        }
+      ],
+      "num_generated": 2
+    },
+    "created_at": "2026-06-27T03:31:59.971863Z"
   }
 ]
