@@ -1,9 +1,0 @@
-fastapi
-streamlit
-transformers
-torch
-Wikipedia-API
-pydantic
-pytest
-httpx
-uvicorn
