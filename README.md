@@ -15,4 +15,4 @@ Repository Structure
 
 7.Project Documentation
 
-8.Project Demonstrati
+8.Project Demonstration
