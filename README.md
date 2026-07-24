@@ -1,59 +1,59 @@
-Here is your cleaned-up, perfectly formatted, and professional **`README.md`** file.
-
-The markdown syntax, directory trees, table formatting, and installation commands have been tidied up so you can copy and paste this directly into your GitHub repository root.
-
-```markdown
 # AI-Powered Personalized Networking Assistant
 
-This project was developed as part of the **SmartBridge Internship Program** under the **Artificial Intelligence & Data Science** domain. The objective is to build an intelligent networking assistant that helps users generate personalized conversation starters based on event details using Natural Language Processing (NLP) and Generative AI techniques.
+This project was developed as part of the **SmartBridge Internship Program** under the **Artificial Intelligence & Data Science** domain. The objective is to build an intelligent networking assistant that helps users generate personalized conversation starters based on event details using **Natural Language Processing (NLP)** and **Generative AI** techniques.
 
-The application follows a decoupled architecture using **FastAPI** as the backend engine and **Streamlit** as the interactive frontend client. It utilizes **DistilBERT** for semantic theme extraction and **GPT-2 Small** for generating context-aware networking icebreakers.
+The application follows a decoupled architecture using **FastAPI** as the backend and **Streamlit** as the frontend. It utilizes **DistilBERT** for semantic theme extraction and **GPT-2 Small** for generating context-aware networking icebreakers.
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 The primary objective of this project is to assist professionals, students, and conference attendees in initiating meaningful conversations by generating personalized networking suggestions based on event topics and user interests.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-* **AI-Powered Theme Extraction:** Contextual classification of event details into core networking themes.
-* **Personalized Icebreaker Generation:** Autoregressive generation of context-aware conversation starters.
-* **Interactive Streamlit Dashboard:** User-friendly frontend client for real-time input and rendering.
-* **FastAPI REST Engine:** Decoupled backend architecture providing high-performance API endpoints.
-* **Wikipedia Context Verification:** Automated background retrieval for topic fact-checking.
-* **Telemetry & History Tracking:** Automatic logging of user interactions to persistent JSON stores.
-* **User Feedback Collection:** Interactive feedback mechanisms for continuous response evaluation.
-* **Automated QA Verification:** Continuous unit testing implemented via Pytest.
+* AI-powered semantic theme extraction
+* Personalized networking icebreaker generation
+* Interactive Streamlit dashboard
+* FastAPI REST API backend
+* Wikipedia-based contextual information
+* User history tracking
+* Feedback collection system
+* Automated testing using Pytest
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Programming Language:** Python
-* **Frontend UI Framework:** Streamlit
-* **Backend API Engine:** FastAPI, Uvicorn
-* **Machine Learning Pipelines:** DistilBERT (Zero-Shot Classification), GPT-2 Small (Text Generation), Hugging Face Transformers
-* **Data Storage:** Local JSON Flat-Files (`history.json`, `feedback.json`)
+* **Frontend:** Streamlit
+* **Backend:** FastAPI, Uvicorn
+* **Machine Learning:** DistilBERT (Zero-Shot Classification), GPT-2 Small (Text Generation), Hugging Face Transformers
+* **Data Storage:** Local JSON Flat-Files (Telemetry & Feedback Logging)
 * **Testing & Quality Assurance:** Pytest
-* **Deployment & Environment:**
-  * **Current Implementation:** Decoupled Microservice Architecture (FastAPI on Port 8000, Streamlit on Port 8501 via Uvicorn)
-  * **Production Target Roadmap:** Microservice Containerization (Docker), Semantic Vector Database (ChromaDB), Asynchronous Task Queue (Celery + Redis)
+* **Deployment & Hosting Environment:**
+
+  * **Local Environment:** Decoupled Microservice Architecture (FastAPI running on Port **8000** and Streamlit running on Port **8501** using Uvicorn)
+  * **Production Target Roadmap:**
+
+    * Docker Containerization
+    * ChromaDB (Vector Database Migration)
+    * Celery + Redis (Asynchronous Task Queue Management)
 
 ---
 
-## 🧠 Machine Learning Workflow
+## Machine Learning Workflow
 
-1. **Theme Extraction:** DistilBERT is utilized through a Zero-Shot Classification pipeline to extract and categorize semantic themes from user-provided event information.
-2. **Icebreaker Generation:** Extracted themes are injected into prompt templates and fed to GPT-2 Small, which generates tailored networking conversation starters using autoregressive inference layers.
+1. **Theme Extraction:** DistilBERT is used through a Zero-Shot Classification pipeline to identify semantic themes from user-provided event information.
+2. **Icebreaker Generation:** The extracted themes are provided as prompts to GPT-2 Small, which generates personalized networking conversation starters using autoregressive text generation.
 
 ---
 
-## 📂 Project Directory & Milestone Map
+## Project Directory & Milestone Map
 
-This repository houses all institutional deliverables, with the functional application codebase integrated directly within the development phase folder:
+This repository contains all SmartBridge project deliverables, with the complete application source code organized under the **Project Development Phase**.
 
 ```text
 1. Brainstorming & Ideation/
@@ -76,12 +76,13 @@ This repository houses all institutional deliverables, with the functional appli
 └── Project Planning.pdf
 
 5. Project Development Phase/
-├── Code-Layout, Readability
+├── Code-Layout, Readability.pdf
 ├── Coding & Solution.pdf
-├── backend/            <-- Core FastAPI Engine, models, and Wikipedia service
-├── frontend/           <-- Streamlit UI dashboard interface layer
-├── data/               <-- Local telemetry logging (history.json, feedback.json)
-└── tests/              <-- Automated validation suite executed via pytest
+└── codes/
+    ├── backend/
+    ├── frontend/
+    ├── data/
+    └── requirements.txt
 
 6. Project Testing/
 └── Performance Testing.pdf
@@ -94,107 +95,102 @@ This repository houses all institutional deliverables, with the functional appli
 ├── Communication.pdf
 ├── Scalability & Future Plan.pdf
 └── Team Involvement.pdf
-
 ```
 
 ---
 
-## 🚀 Installation & Setup Instructions
+## Installation & Setup Instructions
 
 ### 1. Clone the Repository
 
-```cmd
-git clone [https://github.com/yourusername/AI-Powered-Personalized-Networking-Assistant.git](https://github.com/yourusername/AI-Powered-Personalized-Networking-Assistant.git)
+```bash
+git clone https://github.com/yourusername/AI-Powered-Personalized-Networking-Assistant.git
 cd AI-Powered-Personalized-Networking-Assistant
-
 ```
 
 ### 2. Create and Activate a Virtual Environment
 
-```cmd
+```bash
 python -m venv myenv
 myenv\Scripts\activate
-
 ```
 
-### 3. Install Workspace Dependencies
+### 3. Install Project Dependencies
 
-```cmd
-pip install -r "5. Project Development Phase/backend/requirements.txt"
-
-```
-
----
-
-## ⚡ Running the Application
-
-*Note: Paths are wrapped in quotes to safely handle institutional directory spaces.*
-
-### Step 1: Initialize the FastAPI Backend Engine (Port 8000)
-
-Open a terminal workspace, activate the environment, and execute:
-
-```cmd
-python "5. Project Development Phase/backend/app.py"
-
-```
-
-* **Swagger API Documentation:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-* **ReDoc API Documentation:** [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
-
-### Step 2: Launch the Streamlit Frontend UI (Port 8501)
-
-Open a second terminal window, activate the environment, and run:
-
-```cmd
-streamlit run "5. Project Development Phase/frontend/app.py"
-
-```
-
-* **Interactive Web Dashboard:** [http://localhost:8501](http://localhost:8501)
-
----
-
-## 🧪 Testing & Quality Assurance
-
-To execute the automated unit testing suite across the application modules, run:
-
-```cmd
-python -m pytest "5. Project Development Phase/tests/"
-
+```bash
+pip install -r "5. Project Development Phase/codes/requirements.txt"
 ```
 
 ---
 
-## 📊 Scalability & Future Roadmap Grid
+## Running the Project
 
-| Target Module | Implementation Strategy | Core Technology | Strategic Impact / Value |
-| --- | --- | --- | --- |
-| **Deployment** | Microservice Containerization | Docker | Eliminates environmental disparities and simplifies multi-server deployment. |
-| **Data Layer** | Semantic Memory Migration | ChromaDB | Upgrades flat-file JSON storage to vector embeddings for sub-millisecond similarity lookups. |
-| **Inference Queue** | Asynchronous Task Processing | Celery + Redis | Prevents UI blocking by executing heavy AI model inference in background workers. |
+> **Note:** Folder paths are enclosed in quotation marks because the project directory names contain spaces.
 
----
+### Step 1: Start the FastAPI Backend (Port 8000)
 
-## 📽️ Project Deliverables & Demonstration
-
-This repository contains all finalized SmartBridge submission deliverables across the project lifecycle, including milestone documentation, development source code, and continuous testing reports.
-
-* 📺 **Project Demonstration Video:** [Watch the Video on YouTube](https://youtu.be/NPYMMxekIOQ?si=7Zdzcr9_6JEy2jFG)
-
----
-
-## 👥 Team Members
-
-* **Kaverigari Meghana** — Co-Developer, Systems Integration Engineer, & Project Documentation
-* **C S Madhulika** — Team Leader, Co-Developer, & Project Documentation
-
----
-
-## 🙏 Acknowledgements
-
-This project was developed as part of the **SmartBridge Internship Program** under the guidance of our mentors. We sincerely acknowledge SmartBridge, our institution, and all mentors and evaluators whose continuous support, guidance, and feedback contributed to the successful completion of this project.
-
+```bash
+python "5. Project Development Phase/codes/backend/app.py"
 ```
 
+After the backend starts, access:
+
+* **Swagger UI:** http://127.0.0.1:8000/docs
+* **ReDoc:** http://127.0.0.1:8000/redoc
+
+### Step 2: Launch the Streamlit Frontend (Port 8501)
+
+```bash
+streamlit run "5. Project Development Phase/codes/frontend/app.py"
 ```
+
+Open the application at:
+
+* **Streamlit UI:** http://localhost:8501
+
+---
+
+## Testing & Quality Assurance
+
+If your project contains a `tests` directory, execute:
+
+```bash
+python -m pytest "5. Project Development Phase/codes/tests/"
+```
+
+> **Note:** If your repository does not contain a `tests` directory, update or remove this command accordingly.
+
+---
+
+## Scalability & Future Roadmap
+
+| Target Module          | Implementation Strategy       | Core Technology | Strategic Impact                                                                                |
+| ---------------------- | ----------------------------- | --------------- | ----------------------------------------------------------------------------------------------- |
+| **Deployment**         | Microservice Containerization | Docker          | Ensures consistent deployment across development, testing, and production environments.         |
+| **Data Layer**         | Semantic Vector Storage       | ChromaDB        | Replaces JSON-based storage with vector embeddings for efficient semantic search and retrieval. |
+| **Inference Pipeline** | Asynchronous Task Processing  | Celery + Redis  | Improves responsiveness by executing AI inference tasks asynchronously in the background.       |
+
+---
+
+## Project Deliverables & Demonstration
+
+This repository contains all finalized SmartBridge submission deliverables across the complete project lifecycle, including brainstorming, requirement analysis, design, planning, development, testing, documentation, and demonstration artifacts.
+
+### Demonstration Video
+
+Watch the complete project demonstration here:
+
+**YouTube:** https://youtu.be/NPYMMxekIOQ?si=7Zdzcr9_6JEy2jFG
+
+---
+
+## Team Members
+
+* **Kaverigari Meghana** – Co-Developer, Systems Integration Engineer & Project Documentation
+* **Madhulika** – Team Leader & Project Documentation
+
+---
+
+## Acknowledgement
+
+This project was developed as part of the SmartBridge Internship Program under the guidance of our faculty mentors. We sincerely acknowledge SmartBridge, our institution, and all faculty mentors, evaluators, and reviewers whose continuous guidance, support, and valuable feedback contributed to the successful completion of this project.
