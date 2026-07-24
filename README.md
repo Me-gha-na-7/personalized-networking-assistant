@@ -190,8 +190,8 @@ https://youtu.be/NPYMMxekIOQ?si=7Zdzcr9_6JEy2jFG
 
 ## Team Members
 
-* **Kaverigari Meghana** – Co-Developer & Systems Integration Engineer
-* **Madhulika** – Team Leader & Co-Developer
+* **Kaverigari Meghana** – Co-Developer & Systems Integration Engineer & Project Documentation
+* **Madhulika** – Team Leader & Project Documentation
 
 ---
 
