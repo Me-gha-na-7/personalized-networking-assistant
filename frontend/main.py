@@ -3,7 +3,7 @@ Personalized Networking Assistant - Streamlit Frontend
 A professional, interactive web dashboard for generating smart conversation starters
 for networking events, powered by AI and integrated with FastAPI backend.
 """
-
+import os
 import streamlit as st
 import requests
 import json
@@ -22,7 +22,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Backend configuration
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = os.getenv("BACKEND_URL", "https://meghanaaa7-networking-assistant-backend.hf.space")
 API_TIMEOUT = 30  # seconds
 
 # Streamlit page configuration
