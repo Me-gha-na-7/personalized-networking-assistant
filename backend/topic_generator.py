@@ -9,6 +9,7 @@ import logging
 import re
 from typing import List, Dict, Any
 from transformers import pipeline
+import spaces
 
 # Configure logging
 logging.basicConfig(
@@ -17,7 +18,21 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
+@spaces.GPU
+def generate_text_gpu(generator_pipeline, prompt: str, max_new_tokens: int = 40):
+    """
+    Standalone function decorated with @spaces.GPU for ZeroGPU detection.
+    Runs text generation on GPU when called.
+    """
+    return generator_pipeline(
+        prompt,
+        max_new_tokens=max_new_tokens,
+        num_return_sequences=1,
+        do_sample=True,
+        temperature=0.7,
+        top_p=0.9,
+        pad_token_id=50256
+    )
 class TopicGenerator:
     """
     A service to generate natural conversation starters for networking events
