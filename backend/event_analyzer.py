@@ -427,3 +427,4 @@ def create_event_analyzer(
         >>> result = analyzer.analyze_event("Startup pitch event")
     """
     return EventAnalyzer(model_name=model_name, candidate_labels=custom_labels)
+
