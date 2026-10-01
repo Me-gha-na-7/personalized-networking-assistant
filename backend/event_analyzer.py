@@ -7,6 +7,7 @@ and topics from event descriptions.
 import logging
 from typing import List, Dict, Any, Tuple
 from transformers import pipeline
+import spaces
 
 # Configure logging
 logging.basicConfig(
@@ -15,6 +16,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@spaces.GPU
+def run_zero_shot_gpu(classifier_pipeline, text: str, candidate_labels: list, multi_class: bool = True) -> dict:
+    """Helper function wrapped with @spaces.GPU to run inference on GPU."""
+    return classifier_pipeline(text, candidate_labels, multi_class=multi_class)
 
 class EventAnalyzer:
     """
