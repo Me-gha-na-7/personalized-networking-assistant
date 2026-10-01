@@ -18,9 +18,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 # Import our core services
-from fact_checker import create_fact_checker, FactChecker
-from event_analyzer import create_event_analyzer, EventAnalyzer
-from topic_generator import create_topic_generator, TopicGenerator
+#from fact_checker import create_fact_checker, FactChecker
+# from event_analyzer import create_event_analyzer, EventAnalyzer
+# from topic_generator import create_topic_generator, TopicGenerator
+from .fact_checker import create_fact_checker, FactChecker
+from .event_analyzer import create_event_analyzer, EventAnalyzer
+from .topic_generator import create_topic_generator, TopicGenerator
 
 # Initialize your real service class objects
 fact_checker = create_fact_checker() if 'create_fact_checker' in globals() else FactChecker()
