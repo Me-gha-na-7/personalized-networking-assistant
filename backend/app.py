@@ -1,13 +1,13 @@
 """
 Main FastAPI Application
 Personalized Networking Assistant Backend
-
 Integrates all NLP services (event analyzer, topic generator, fact checker)
 and provides REST API endpoints with local JSON persistence for history and feedback.
 """
 
 import json
 import logging
+import spaces
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, List, Dict, Any
@@ -24,6 +24,7 @@ from pydantic import BaseModel, Field
 from .fact_checker import create_fact_checker, FactChecker
 from .event_analyzer import create_event_analyzer, EventAnalyzer
 from .topic_generator import create_topic_generator, TopicGenerator
+
 
 # Initialize your real service class objects
 fact_checker = create_fact_checker() if 'create_fact_checker' in globals() else FactChecker()
@@ -42,7 +43,20 @@ logger = logging.getLogger(__name__)
 DATA_DIR = Path("data")
 HISTORY_FILE = DATA_DIR / "history.json"
 FEEDBACK_FILE = DATA_DIR / "feedback.json"
+app = FastAPI()
 
+# ZeroGPU probe so Hugging Face detects a valid GPU function during startup
+@spaces.GPU  # <--- 2. ADD DECORATOR HERE ABOVE THE PROBE FUNCTION
+def zerogpu_probe():
+    return "ZeroGPU initialized"
+
+@app.on_event("startup")
+def startup_event():
+    # Call probe on startup to register ZeroGPU
+    try:
+        zerogpu_probe()
+    except Exception:
+        pass
 # Create data directory if it doesn't exist
 DATA_DIR.mkdir(exist_ok=True)
 
